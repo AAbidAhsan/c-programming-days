@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int a,b,i;
+    char str[100];
+    scanf("%d",&a);
+    
+    for(i=0;i<a;i++){
+        scanf(" %[^\n]s",str);
+        b = strlen(str);
+        if(b-2<9){
+            printf("%s\n", str);
+        }
+        else{
+            printf("%c%d%c\n",str[0],b-2,str[b-1]);
+        }
+        
+    }
+    
+
+    return 0;
+}

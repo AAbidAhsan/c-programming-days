@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+    int length,k;
+    char str[10];
+    scanf("%s",str);
+    scanf("%d",&k);
+    
+    while(k>0){
+        length =0;
+        while(str[length] != '\0'){
+            length++;
+        }
+        if(str[length-1] == '0'){
+            str[length-1] = '\0';
+        }
+        else{
+            str[length-1] -= 1;
+        }
+        
+        k--;
+    }
+    
+    printf("%s",str);
+    
+    
+    
+    
+    
+    return 0;
+    
+    
+}

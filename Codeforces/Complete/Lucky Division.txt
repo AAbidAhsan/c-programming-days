@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int a[13] = {4,7,47,74,77,444,447,474,477,744,747,774,777};
+    int i=0,num;
+    scanf("%d",&num);
+    while (a[i]<=num){
+        if(num%a[i]==0){
+            printf("YES");
+            break;
+        }
+        i++;
+    }
+    if(a[i]>num){
+        printf("NO");
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}

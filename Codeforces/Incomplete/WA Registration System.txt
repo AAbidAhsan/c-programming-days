@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n,i,j,result,length;
+    scanf("%d",&n);
+    char str[n][32];
+    for(i=0;i<n;i++){
+        scanf("%s",str[i]);
+        length =0;
+        while (str[i][length]!='\0'){
+        length++;
+        }
+        for(j=0;j<i;j++){
+            
+                result = strcmp (str[i],str[j]);
+                if(result == 0){
+                    if(str[i][length-1]>='0' && str[i][length-1]<='9' ){
+                        str[i][length-1] += 1;
+                    }
+                    else {
+                        str[i][length] = '1';
+                    }
+                }
+            
+        
+        }
+        
+    }
+    for(i=0;i<n;i++){
+        length =0;
+        while (str[i][length]!='\0'){
+        length++;
+        }
+        if(str[i][length-1]>='0' && str[i][length-1]<='9' ){
+            printf("%s\n",str[i]);
+        }
+        else{
+            printf("OK\n");
+        }
+        
+    }
+    
+
+    
+}

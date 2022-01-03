@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+int main(){
+    int n,i,decision,hard=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        scanf("%d",&decision);
+        if(decision == 1){
+            hard = 1;
+        }
+        else{
+            continue;
+        }
+    }
+    //printf("%d",hard);
+    if(hard == 1){
+        printf("HARD");
+    }
+    else{
+        printf("EASY");
+    }
+    
+    
+    
+}

@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,d,count = 0;
+    scanf("%d %d",&a , &b);
+    if (a == b ){
+        count++;
+    }
+    scanf("%d",&c);
+    if( c == a || c == b){
+        count ++;
+    }
+    scanf("%d",&d);
+    if( d == a || d == b || d == c){
+        count ++;
+    }
+    printf("%d",count);
+
+    return 0;
+}

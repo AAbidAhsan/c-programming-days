@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n,m,a;
+    long long int p,q;
+    scanf("%d %d %d",&n, &m, &a);
+    n = ceil((double)(n)/(double)(a));
+    
+    m = ceil((double)(m)/(double)(a));
+    
+    printf("%lld",(long long int)(n)*(long long int)(m)); 
+    
+    
+
+    return 0;
+}

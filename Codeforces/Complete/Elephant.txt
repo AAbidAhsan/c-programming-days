@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+    int distance,steps=0;
+    scanf("%d", &distance);
+    
+    while(distance >5){
+        steps++;
+        distance -= 5;
+    }
+    
+    steps++;
+    printf("%d",steps);
+    
+    
+    
+    
+    
+    return 0;
+    
+    
+}

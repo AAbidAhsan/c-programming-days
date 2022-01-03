@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,count=0;
+    scanf("%d",&n);
+    char str[100];
+    while(n>0){
+        scanf("%s",str);
+        if(str[0] == 'T'){
+            count += 4;
+        }
+        if(str[0] == 'C'){
+            count += 6;
+        }
+        if(str[0] == 'O'){
+            count += 8;
+        }
+        if(str[0] == 'D'){
+            count += 12;
+        }
+        if(str[0] == 'I'){
+            count += 20;
+        }
+        n--;
+    }
+    
+    printf("%d",count);
+}

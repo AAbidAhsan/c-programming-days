@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n,d1,d2,d3,d4,t1,t2,t3;
+    scanf("%d",&n);
+    for(int i=n+1, i<=9000, i++){
+        d1=i%10;
+        t1=i/10;
+        d2=t1%10;
+        t2=t1/10;
+        d3=t2%10;
+        t3=t2/10;
+        if(d1!=d2 && d1!=d3 && d1!=t3 && d2!=d3 && d2!=t3 && d3!=t3){
+            printf("%d",i);
+            break;
+        }
+        else{
+            continue;
+        }
+    }
+    if(i==9000){
+        printf("9012");
+    }
+    
+    
+    
+    
+    
+    
+    return 0;
+}

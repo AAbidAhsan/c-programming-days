@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main()
+{
+   int n,min,max,number,number1,number2,count=1;
+   scanf("%d",&n);
+   if(n == 1){
+       scanf("%d",&number1);
+       printf("0");
+       return 0;
+   }
+   scanf("%d %d",&number1,&number2);
+   if(number2 >= number1){
+       max = number2;
+       min = number1;
+   }
+   else {
+       max = number1;
+       min = number2;
+   }
+   
+   while (n-2>0){
+       scanf("%d",&number);
+       if(number>max){
+           count++;
+           max = number;
+       }
+       else if(number < min ){
+           count++;
+           min = number;
+       }
+       n--;
+   }
+   printf("%d",count);
+
+    return 0;
+}

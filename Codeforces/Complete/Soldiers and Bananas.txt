@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+    int cost,have,need,i;
+    scanf("%d %d %d",&cost,&have,&need);
+   for(i=need-1;i>=0;i--){
+        need += i;
+    }
+    
+    
+    need = need*cost - have;
+    if(need>=0){
+        printf("%d",need);
+    }
+    else{
+        printf("0");
+    }
+    
+    
+    
+    
+    return 0;
+    
+    
+}

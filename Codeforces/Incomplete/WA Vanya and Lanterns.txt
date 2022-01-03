@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int i,j;
+    double l;
+    scanf("%d %lf",&n,&l);
+    double max=0,temp;
+    double position[n];
+    
+    for(i=0;i<n;i++){
+        scanf("%lf",&position[i]);
+    }
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+        if (position [i] > position [j]){
+            temp = position[i];
+            position[i] = position[j];
+            position[j] = temp;
+        }
+    }
+    }
+    
+    for(i=1;i<n;i++){
+        if (position[i] - position[i-1] > max){
+            max = position[i] - position[i-1];
+        }
+    }
+    
+    //printf("max = %lf\n",max);
+    //printf("First = %lf\n",position[0]);
+    //printf("Last = %lf\n",l-position[n-1]);
+    if ( max/2 > position[0] && max/2 > l - position[n-1]){
+        printf("%lf",max/2);
+    }
+    else{
+        if (position[0] > l - position[n-1]){
+            printf("%lf",position[0]);
+        }
+        else{
+            printf("%lf",l - position[n-1]);
+        }
+    }
+}

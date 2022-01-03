@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n,D=0,A=0;
+    scanf("%d", &n);
+    char str1[n];
+    scanf(" %s",str1);
+    
+    while(n>0){
+        if(str1[n-1] == 'D'){
+            D++;
+        }
+        else if (str1[n-1]=='A'){
+            A++;
+        }
+        n--;
+    }
+    
+    if(A>D){
+        printf("Anton");
+    }
+    else if(D>A){
+        printf("Danik");
+    }
+    else{
+        printf("Friendship");
+    }
+    
+    
+    
+    
+    
+    
+    return 0;
+}

@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+    int a,decisions,i,sumofdecisions,solved=0;
+    scanf("%d", &a);
+    while (a!=0){
+        sumofdecisions = 0;
+        for(i=0;i<3;i++){
+            scanf("%d",&decisions);
+            sumofdecisions+=decisions;
+        }
+        if(sumofdecisions>1){
+            solved++;
+        }
+        
+        a--;
+        
+    }
+    
+    printf("\n%d",solved);
+    
+
+    return 0;
+}

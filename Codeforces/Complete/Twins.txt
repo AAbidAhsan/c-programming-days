@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,sum=0,count=0,j,temp,takecoinval=0;
+    scanf("%d",&n);
+    int coins[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&coins[i]);
+        sum += coins[i];
+    }
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(coins[i]<coins[j]){
+                temp = coins[i];
+                coins[i]=coins[j];
+                coins[j]=temp;
+            }
+        }
+    }
+    i=0;
+    while(takecoinval<=sum-takecoinval){
+        count++;
+        takecoinval += coins[i];
+        i++;
+    }
+    printf("%d",count);
+    
+    return 0;
+}

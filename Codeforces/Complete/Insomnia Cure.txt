@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int k,l,m,n,d,i,count=0;
+    scanf("%d %d %d %d %d",&k,&l,&m,&n,&d);
+    int dragon[d];
+    for(i=0;i<=d;i++){
+        dragon[i-1] = 0;
+    }
+    for(i=k;i<=d;i+=k){
+        dragon[i-1] = 1;
+    }
+    for(i=l;i<=d;i+=l){
+        dragon[i-1] = 1;
+    }
+    for(i=m;i<=d;i+=m){
+        dragon[i-1] = 1;
+    }
+    for(i=n;i<=d;i+=n){
+        dragon[i-1] = 1;
+    }
+    for(i=0;i<=d;i++){
+        if(dragon[i] == 1){
+            count++;
+        }
+    }
+    printf("%d",count);
+
+    return 0;
+}

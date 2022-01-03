@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+    int stops;
+    scanf("%d", &stops);
+    int mincapacity=0,capacity=0,in,out;
+    while(stops != 0){
+        scanf("%d %d", &out, &in);
+        capacity -= out;
+        capacity += in;
+        if(capacity > mincapacity){
+            mincapacity = capacity;
+        }
+        stops--;
+    }
+    printf("%d",mincapacity);
+    
+    
+    return 0;
+    
+    
+}

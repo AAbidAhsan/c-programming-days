@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[100];
+    scanf("%s",str);
+    int i=0,length=0;
+    while(str[length]!='\0'){
+        length++;
+    }
+    //printf("%d\n",length);
+    while(length-i>=7){
+        //printf("%d",i);
+        if(str[i] == str[i+1] && str[i] == str[i+2] && str[i] == str[i+3] && str[i] == str[i+4] && str[i] == str[i+5] && str[i] == str[i+6]){
+            printf("YES\n");
+            //printf("%d %c",i,str[i]);
+            break;
+        }
+        else{
+            i++;
+        }
+    }
+   // printf("%d\n",length-i);
+    if(length-i<7){
+        printf("NO\n");
+    }
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+ 
+int main()
+{
+   long long int n,i,j,number,count;
+   scanf("%lld",&n);
+   while (n>0){
+       count=0;
+       scanf("%lld",&number);
+       for(i=2;i<number;i++){
+           if(number % i == 0){
+               count++;
+               if(count >1 ){
+                   printf("NO\n");
+                   break;
+               }
+           }
+       }
+       if(count == 1){
+           printf("YES\n");
+       }
+       n--;
+   }
+ 
+    return 0;
+}

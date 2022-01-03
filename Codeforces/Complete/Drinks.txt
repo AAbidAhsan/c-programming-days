@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    float sum=0,i;
+    for(int j=0;j<n;j++){
+        scanf("%f",&i);
+        sum += i;
+    }
+    printf("%f",sum/(float)(n));
+
+    return 0;
+}

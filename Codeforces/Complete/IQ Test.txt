@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int i, number,oddcount=0,evencount=0,oddposition,evenposition;
+    for(i=0;i<n;i++){
+        scanf("%d",&number);
+        if(number%2 == 0){
+            evencount++;
+            evenposition = i+1;
+        }
+        else{
+            oddcount++;
+            oddposition = i+1;
+        }
+        
+    }
+    
+    if(evencount == 1){
+        printf("%d",evenposition);
+    }
+    else{
+        printf("%d",oddposition);
+    }
+    return 0;
+}

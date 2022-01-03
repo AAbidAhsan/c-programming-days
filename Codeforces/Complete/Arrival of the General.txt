@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int i,max=0,maxposition,min=101,minposition,numberofsoldiers;
+    scanf("%d",&numberofsoldiers);
+    int soldiers[numberofsoldiers];
+    for(i=0;i<numberofsoldiers;i++){
+        scanf("%d",&soldiers[i]);
+        if(soldiers[i]>max){
+            max = soldiers [i];
+        }
+        if(soldiers[i]<=min){
+            min = soldiers[i];
+            minposition = i;
+        }
+    }
+    for(i=0;i<numberofsoldiers;i++){
+        if(soldiers[i] == max){
+            maxposition = i;
+            break;
+        }
+    }
+    
+    if(maxposition < minposition){
+        printf("%d", (maxposition) + (numberofsoldiers-1-minposition));
+    }
+    else{
+        printf("%d", (maxposition) + (numberofsoldiers-2-minposition));
+    }
+    
+
+    return 0;
+}
